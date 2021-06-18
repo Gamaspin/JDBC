@@ -55,13 +55,14 @@ public class JDBCTestEMP {
 			
 			// 라) 출력
 			while(rs.next()) {
-				System.out.println(rs.getInt(1) + "\t" + rs.getString(2));
+				System.out.println(rs.getInt(1)+"\t"
+									+rs.getString(2)+"\t"
+									+rs.getString(3)+"\t"
+									+rs.getInt(4)+"\t"
+									+rs.getString(5)+"\t"
+									+rs.getString(6)
+									);
 			}
-
-			
-			
-			
-			
 			
 		} catch (ClassNotFoundException e) {
 			System.out.println("드라이버 클래스를 찾지못함!!");
@@ -72,7 +73,6 @@ public class JDBCTestEMP {
 		}
 		finally {
 			// 4. close
-	
 			if(rs != null) {
 				try {
 					rs.close();
@@ -81,8 +81,6 @@ public class JDBCTestEMP {
 					e.printStackTrace();
 				}
 			}
-			
-			
 			if(stmt != null) {
 				try {
 					stmt.close();
@@ -91,8 +89,6 @@ public class JDBCTestEMP {
 					e.printStackTrace();
 				}
 			}
-
-
 			if(conn != null) {
 				try {
 					conn.close();
@@ -101,13 +97,6 @@ public class JDBCTestEMP {
 					e.printStackTrace();
 				}
 			}
-
 		}
-
-
-
-
-
 	}
-
 }
