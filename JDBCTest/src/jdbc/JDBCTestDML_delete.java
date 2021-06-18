@@ -44,13 +44,10 @@ public class JDBCTestDML_delete {
 			// 트랜잭션 설정 -> 밑에 conn.commit(); 되기전까진 커밋되지 않음
 			conn.setAutoCommit(false);
 			
-			
 			System.out.println("부서 정보의 삭제를 시작합니다.");
 			System.out.println("부서 번호를 입력해주세요");
 			String deptno = sc.nextLine();
 		
-			
-			
 			
 			// 3. sql  처리
 				// 사용자에게 정보를 받아 부서 데이터를 입력하는 프로그램을 만들어보자
@@ -82,14 +79,11 @@ public class JDBCTestDML_delete {
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
-			}
-			
-			
-			e.printStackTrace();
+			}	e.printStackTrace();
 		}
 		finally {
 			// 4. close
-	
+
 			if(rs != null) {
 				try {
 					rs.close();
@@ -98,8 +92,6 @@ public class JDBCTestDML_delete {
 					e.printStackTrace();
 				}
 			}
-			
-			
 			if(stmt != null) {
 				try {
 					stmt.close();
@@ -108,8 +100,6 @@ public class JDBCTestDML_delete {
 					e.printStackTrace();
 				}
 			}
-
-
 			if(conn != null) {
 				try {
 					conn.close();
@@ -118,13 +108,6 @@ public class JDBCTestDML_delete {
 					e.printStackTrace();
 				}
 			}
-
 		}
-
-
-
-
-
 	}
-
 }

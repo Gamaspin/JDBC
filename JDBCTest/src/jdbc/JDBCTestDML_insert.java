@@ -84,11 +84,9 @@ public class JDBCTestDML_insert {
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
-			}
-			
-			
-			e.printStackTrace();
+			}	e.printStackTrace();
 		}
+		
 		finally {
 			// 4. close
 	
@@ -100,8 +98,6 @@ public class JDBCTestDML_insert {
 					e.printStackTrace();
 				}
 			}
-			
-			
 			if(stmt != null) {
 				try {
 					stmt.close();
@@ -110,8 +106,6 @@ public class JDBCTestDML_insert {
 					e.printStackTrace();
 				}
 			}
-
-
 			if(conn != null) {
 				try {
 					conn.close();
@@ -120,13 +114,6 @@ public class JDBCTestDML_insert {
 					e.printStackTrace();
 				}
 			}
-
 		}
-
-
-
-
-
 	}
-
 }
